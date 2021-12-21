@@ -1,0 +1,160 @@
+.clientsUs
+{   
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+.box
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "listCl application";
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.clients a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+.clients
+{
+    overflow: auto;
+    background: linear-gradient(to left, #8bb2d1 0%, #eaecee, #8bb2d1);
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 15);
+    min-height: 300px;
+    max-height: 400px;
+}
+.listCl ul 
+{
+    width: 100%;
+}
+.listCl ul li
+{
+    display: flex;
+}
+.li1
+{
+    width: 60%;
+    padding: 5px 0px 5px 5px;
+    text-align: center;
+}
+.li2,
+.li3
+{
+    width: 20%;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.li1,
+.li2,
+.li3
+{
+    white-space: nowrap;
+    position: relative;
+    
+    color: #506a6b;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.li1:before,
+.li2:before,
+.li3:before
+{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: #9bc1df;
+    
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.3s;
+    z-index: -1;
+}
+.li1:hover:before,
+.li2:hover:before,
+.li3:hover:before
+{
+    width: 100%;
+    opacity: 1;
+}
+
+/*  */
+
+.application h3,
+.listCl h3
+{
+    display: flex;
+    justify-content: center;
+    color: #0e3959;
+    font-weight: 200;
+    font-size: 1.4em;
+    padding: 5px 0px;
+
+    background: linear-gradient(to left, #8bb2d1 0%, #eaecee, #8bb2d1);
+    border: 1px solid #337AB7;
+}
+
+
+/*  */
+.application ul
+{
+    width: 100%;
+    display: flex;
+}
+.application ul li
+{
+    width: 20%;
+    list-style: none;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    text-align: center;
+}
+.appl 
+{
+    position: relative;
+    padding: 5px 0px;
+    color: #506a6b;
+    z-index: 1;
+}
+
+.li4
+{
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    
+    color: #506a6b;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.li4:before
+{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: #9bc1df;
+    
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.3s;
+    z-index: -1;
+}
+.li4:hover:before
+{
+    width: 100%;
+    opacity: 1;
+}

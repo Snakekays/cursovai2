@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jellyfish</title>
+        <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/CSS/customers.css">
+    </head>
+    <body>
+        <header>
+            <a href="../customers/" class="logo">Jellyfish</a>
+            <ul>
+                <li><a href="../application/">Новая заявка</a></li>
+                <li><a href="../create/">Новый клиент</a></li>
+                <li><a href="../manager/">Назад</a></li>
+            </ul>
+        </header>
+        
+        <section>
+            <img src="/static/image/osnova.jpg" alt="" id="osnova">
+            <div class="clientsUs">
+                <div class="box">
+                    <!-- Список клиентов -->
+                    <div class="clients listCl">
+                        <h3>Клиенты</h3>
+                        {% for customer in customers %}
+                        <ul>
+                            <li>
+                                <a href="/{{ customer.id }}" class="li1">{{ customer.Surname }} {{ customer.Name }} {{ customer.Otchestvo }}</a>
+                                <a href="/changeCustomer/{{ customer.id }}"class="li2"><ion-icon name="create-outline"></ion-icon></a>
+                                <a href="/deleteCustomer/{{ customer.id }}"class="li2"><ion-icon name="trash-outline"></ion-icon></a>
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Заявки клиента -->
+                    <div class="clients application">
+                        <h3>Заявки</h3>
+                        <ul>
+                            <li>Тип</li>
+                            <li>Описание</li>
+                            <li>Комментарий</li>
+                            <li>Цена</li>
+                            <li>Дата сдачи</li>
+                            <li>Статус</li>
+                            <li>Редактировать</li>
+                            <li>Удалить</li>
+                        </ul>
+                        {% for application in applications %}
+                        <ul class="application appl">
+                            <li>{{ application.Type }}</li>
+                            <li>{{ application.Design }}</li>
+                            <li>{{ application.Comments }}</li>
+                            <li>{{ application.Cost }}</li>
+                            <li>{{ application.Time }}</li>
+                            <li>{{ application.Status }}</li>
+                            <li><a href="сhangeApplication/{{ application.id }}" class="li4"><ion-icon name="create-outline"></ion-icon></a></li>
+                            <li><a href="deleteApplication/{{ application.id }}" class="li4"><ion-icon name="trash-outline"></ion-icon></a></li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

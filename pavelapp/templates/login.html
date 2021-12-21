@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jellyfish</title>
+        <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/CSS/login.css">
+    </head>
+    <body>
+        <header>
+            <a href="../" class="logo">Jellyfish</a>
+            <ul>
+                <li><a href="../">Назад</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="/static/image/osnova.jpg" alt="" id="osnova">
+            <div class="login100-form" id=" ">
+                <h2>Личный кабинет</h2>
+                <form method="post" action="" name="login_user">
+                    {% csrf_token %}
+                    <div class="wrap-input100" id=" ">
+                        <p>Логин:</p>
+                        <input class="input100" type="text" name="enter_login" >
+                    </div>
+                    <div class="wrap-input100" id=" ">
+                        <p>Пароль:</p>
+                        <input class="input100" type="password" name="enter_pass">
+                    </div>
+                    <div class="container-login100-form-btn" id=" ">
+                        <input class="login100-form-btn" type="submit" value="Авторизация">
+                    </div>
+                    
+                </form>
+                <p class="message">{{ message }}</p>
+            </div>
+        </section>
+    </body>
+</html>

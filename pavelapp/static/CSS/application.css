@@ -1,0 +1,93 @@
+.blockForm
+{
+    margin-top: 30px;
+    position: relative;
+    width: 60%;
+    padding: 20px 40px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 15);
+}
+.box
+{
+    position: relative;
+}
+.infos
+{
+    position: relative;
+    width: 100%;
+}
+h3
+{
+    text-align: center;
+    color: #0e3959;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/*  */
+.row50
+{
+    display: flex;
+    gap: 30px;
+}
+.inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.inputBox p 
+{
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-left: 15px;
+}
+.input100 {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #333333;
+  
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 30px;
+    border-radius: 25px;
+    padding: 0 30px 0 23px;
+  }
+
+.row100
+{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.btn
+{
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e0e0e0;
+  
+    width: 40%;
+    height: 35px;
+    border-radius: 25px;
+    background: #333333;
+    padding: 0 25px;
+  
+    transition: all 0.6s;
+  
+    position: relative;
+    z-index: 1;
+}
+  .btn:hover {
+    background: #636363;
+    color: #fff;
+  }
+  .btn:hover:before {
+    opacity: 1;
+  }

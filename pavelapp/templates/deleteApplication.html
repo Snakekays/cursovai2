@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jellyfish</title>
+        <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/CSS/deleteChange.css">
+    </head>
+    <body>
+        <header>
+            <a href="/customers/" class="logo">Jellyfish</a>
+            <ul>
+                <li><a href="../customers/">Назад</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="/static/image/osnova.jpg" alt="" id="osnova">
+            <div class="blockForm">
+                <h3>Вы точно хотите удалить заявку</h3>
+                <div class="box">
+                    <div class="infos">
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="btn">Да</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

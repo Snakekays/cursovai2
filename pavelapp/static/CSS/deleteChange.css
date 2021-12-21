@@ -1,0 +1,61 @@
+.blockForm
+{
+    margin-top: 30px;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 15);
+}
+.box
+{
+    position: relative;
+}
+.infos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+h3
+{
+    text-align: center;
+    color: #0e3959;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+a
+{
+    text-decoration: none;
+}
+
+.btn
+{
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e0e0e0;
+  
+    width: 120px;
+    height: 35px;
+    border-radius: 25px;
+    background: #333333;
+    padding: 0 25px;
+  
+    transition: all 0.6s;
+  
+    position: relative;
+    z-index: 1;
+}
+  .btn:hover {
+    background: #636363;
+    color: #fff;
+  }
+  .btn:hover:before {
+    opacity: 1;
+  }
