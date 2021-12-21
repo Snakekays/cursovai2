@@ -39,8 +39,6 @@
                         <h3>Заявки</h3>
                         <ul>
                             <li>Тип</li>
-                            <li>Описание</li>
-                            <li>Комментарий</li>
                             <li>Цена</li>
                             <li>Дата сдачи</li>
                             <li>Статус</li>
@@ -50,8 +48,6 @@
                         {% for application in applications %}
                         <ul class="application appl">
                             <li>{{ application.Type }}</li>
-                            <li>{{ application.Design }}</li>
-                            <li>{{ application.Comments }}</li>
                             <li>{{ application.Cost }}</li>
                             <li>{{ application.Time }}</li>
                             <li>{{ application.Status }}</li>

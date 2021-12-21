@@ -24,29 +24,29 @@
                             <div class="row50">
                                 <div class="inputBox">
                                     <p>Имя:</p>
-                                    <input class="input100" type="text" name="First_Name" placeholder="{{ message_first_name }}">
+                                    <input class="input100" type="text" name="First_Name" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Фамилия:</p>
-                                    <input class="input100" type="text" name="Last_Name" placeholder="{{ message_last_name }}">
+                                    <input class="input100" type="text" name="Last_Name" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Отчество:</p>
-                                    <input class="input100" type="text" name="Middle_name" placeholder="{{ message_middle_name }}">
+                                    <input class="input100" type="text" name="Middle_name" required>
                                 </div>
                             </div>
                             <div class="row50">
                                 <div class="inputBox">
                                     <p>Серия и номер паспорта:</p>
-                                    <input class="input100" type="text" name="Series_and_number" placeholder="{{ message_series }}">
+                                    <input class="input100" type="text" pattern="[0-9]{4} [0-9]{6}" name="Series_and_number" placeholder="7777 777777">
                                 </div>
                                 <div class="inputBox">
                                     <p>Телефон:</p>
-                                    <input class="input100" type="text" name="Telephone" placeholder="{{ message_telephone }}">
+                                    <input class="input100" type="tel" pattern="8[0-9]{10}" name="Telephone" placeholder="89505639876" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Почта:</p>
-                                    <input class="input100" type="text" name="Email" placeholder="{{ message_email }}">
+                                    <input class="input100" type="email" name="Email" placeholder="pavelpolu@mail.com" required>
                                 </div>
                             </div>
                             <div class="row100">

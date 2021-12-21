@@ -39,10 +39,15 @@ class LoginPage(View):
 
 class SessionCheck(View):
     def get(self, request):
+        employee = Employee.objects.get(id = request.session['id_user'])
+        context = {
+            'employee': employee
+        }
         if not request.session["priv_user"]:
-            return render(request, 'employee.html')
+            return render(request, 'employee.html', context=context)
         else:
-            return render(request, 'manager.html')
+            return render(request, 'manager.html', context=context)
+            
 
 class ContactPage(View):
     def get(self, request):
@@ -96,24 +101,13 @@ class CreatePage(View):
         Series_and_number = request.POST.get("Series_and_number")
         Telephone = request.POST.get("Telephone")
         Email = request.POST.get("Email")
-        if not First_Name:
-            context["message_first_name"] = "Enter your name"
-        elif not Last_Name:
-            context["message_last_name"] = "Enter your last name"
-        elif not Middle_name:
-            context["message_middle_name"] = "Enter your middle name"
-        elif not Series_and_number:
-            context["message_series"] = "Enter your series and number"
-        elif not Telephone:
-            context["message_telephone"] = "Enter your series and number"
-        elif not Email:
-            context["message_email"] = "Enter your series and number"
         
         if context:
             return render(request, "create.html", context=context)
         else:
             add_customer(Series_and_number, Telephone, First_Name, Last_Name, Middle_name,Email)
             return HttpResponseRedirect('../customers')
+
 # Редактирование клиента
 class CustomersrChangePagePage(View):
     def get(self, request, id):
@@ -133,24 +127,13 @@ class CustomersrChangePagePage(View):
         Series_and_number = request.POST.get("Series_and_number")
         Telephone = request.POST.get("Telephone")
         Email = request.POST.get("Email")
-        # if not First_Name:
-        #     context["message_first_name"] = "Enter your name"
-        # elif not Last_Name:
-        #     context["message_last_name"] = "Enter your last name"
-        # elif not Middle_name:
-        #     context["message_middle_name"] = "Enter your middle name"
-        # elif not Series_and_number:
-        #     context["message_series"] = "Enter your series and number"
-        # elif not Telephone:
-        #     context["message_telephone"] = "Enter your series and number"
-        # elif not Email:
-        #     context["message_email"] = "Enter your series and number"
 
         if context:
             return render(request, "changeCustomer.html", context=context)
         else:
             update_customers(id,Series_and_number,Telephone,First_Name,Last_Name,Middle_name,Email)
             return HttpResponseRedirect('../customers')
+
 # Удаление клиента
 class CustomersrDeletePage(View):
     def get(self, request, id):
@@ -179,12 +162,7 @@ class ApplicationPage(View):
         return render(request, 'application.html', context=context)
 
     def post(self, request):
-        customers = get_customer()
-        status = ['Принят', 'В работе', 'Завершен', 'Отдан']
-        context={
-            'customers': customers,
-            'status': status
-        }
+        context={}
         OCustomer = request.POST.get("OCustomer")
         Comments = request.POST.get("Comments")
         Type = request.POST.get("Type")
@@ -192,27 +170,16 @@ class ApplicationPage(View):
         Cost = request.POST.get("Cost")
         Time = request.POST.get("Time")
         Status = request.POST.get("Status")
-        if not Comments:
-            context["message_comments"] = "Enter your comments"
-        elif not Type:
-            context["message_type"] = "Enter your type"
-        elif not Design:
-            context["message_design"] = "Enter your design"
-        elif not Cost:
-            context["message_cost"] = "Enter your cost"
-        elif not Time:
-            context["message_time"] = "Enter your time"
-        elif not Status:
-            context["message_status"] = "Enter your status"
 
         if context:
             return render(request, "application.html", context=context)
         else:
             add_application(Type, Design, Comments, Cost, Time, Status, OCustomer)
             return HttpResponseRedirect('../customers')
+
 # Редактирование заявки
 class ApplicationChangePage(View):
-    def get(self, request,id):
+    def get(self, request, id):
         customers = get_customer()
         сhangeApplication = get_application_id(id)
         status = ['Принят', 'В работе', 'Завершен', 'Отдан']

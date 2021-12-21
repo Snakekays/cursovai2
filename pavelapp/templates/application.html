@@ -30,27 +30,30 @@
                                         {% endfor %}
                                     </select>
                                 </div>
+                            </div>
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <p>Описание:</p>
+                                    <input class="input100" type="text" name="Design" placeholder="{{ message_design }}" required>
+                                </div>
                                 <div class="inputBox">
                                     <p>Комментарий:</p>
-                                    <input class="input100" type="text" name="Comments" placeholder="{{ message_comments }}">
+                                    <input class="input100" type="text" name="Comments" placeholder="{{ message_comments }}" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Дата сдачи:</p>
-                                    <input class="input100" type="date" name="Time" placeholder="{{ message_time }}">
+                                    <input class="input100" type="date" name="Time" placeholder="{{ message_time }}" required>
                                 </div>
                             </div>
                             <div class="row50">
                                 <div class="inputBox">
                                     <p>Тип:</p>
-                                    <input class="input100" type="text" name="Type" placeholder="{{ message_type }}">
+                                    <input class="input100" type="text" name="Type" placeholder="{{ message_type }}" required>
                                 </div>
-                                <div class="inputBox">
-                                    <p>Описание:</p>
-                                    <input class="input100" type="text" name="Design" placeholder="{{ message_design }}">
-                                </div>
+                                
                                 <div class="inputBox">
                                     <p>Цена:</p>
-                                    <input class="input100" type="text" name="Cost" placeholder="{{ message_cost }}">
+                                    <input class="input100" type="text" pattern="[0-9]{9999999}" placeholder="19990" name="Cost"  placeholder="{{ message_cost }}" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Статус:</p>

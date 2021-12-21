@@ -36,25 +36,25 @@
                                 </div>
                                 <div class="inputBox">
                                     <p>Дата сдачи:</p>
-                                    <input class="input100" type="date" name="Time" value="{{ сhangeApplication.Time|date:'Y-m-d' }}">
+                                    <input class="input100" type="date" name="Time" value="{{ сhangeApplication.Time|date:'Y-m-d' }}" required>
                                 </div>
                                 <div class="inputBox">
-                                    <p>Комментарий:</p>
-                                    <input class="input100" type="text" name="Comments" value="{{ сhangeApplication.Comments }}">
+                                    <p>Цена:</p>
+                                    <input class="input100" type="text" pattern="[0-9]{9999999}" placeholder="19990" name="Cost" value="{{ сhangeApplication.Cost }}" required>
                                 </div>
                             </div>
                             <div class="row50">
                                 <div class="inputBox">
                                     <p>Тип:</p>
-                                    <input class="input100" type="text" name="Type" value="{{ сhangeApplication.Type }}">
+                                    <input class="input100" type="text" name="Type" value="{{ сhangeApplication.Type }}" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Описание:</p>
-                                    <input class="input100" type="text" name="Design" value="{{ сhangeApplication.Design }}">
+                                    <input class="input100" type="text" name="Design" value="{{ сhangeApplication.Design }}" required>
                                 </div>
                                 <div class="inputBox">
-                                    <p>Цена:</p>
-                                    <input class="input100" type="text" name="Cost" value="{{ сhangeApplication.Cost }}">
+                                    <p>Комментарий:</p>
+                                    <input class="input100" type="text" name="Comments" value="{{ сhangeApplication.Comments }}" required>
                                 </div>
                             </div>
                             <div class="row100">
