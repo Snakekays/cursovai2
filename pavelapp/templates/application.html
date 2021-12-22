@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="inputBox">
                                     <p>Комментарий:</p>
-                                    <input class="input100" type="text" name="Comments" placeholder="{{ message_comments }}" required>
+                                    <input class="input100" type="text" name="Comments" placeholder="{{ message_comments }}">
                                 </div>
                                 <div class="inputBox">
                                     <p>Дата сдачи:</p>
@@ -53,7 +53,7 @@
                                 
                                 <div class="inputBox">
                                     <p>Цена:</p>
-                                    <input class="input100" type="text" pattern="[0-9]{9999999}" placeholder="19990" name="Cost"  placeholder="{{ message_cost }}" required>
+                                    <input class="input100" type="number" min="1000" max="9999999" placeholder="19990" name="Cost"  placeholder="{{ message_cost }}" required>
                                 </div>
                                 <div class="inputBox">
                                     <p>Статус:</p>
